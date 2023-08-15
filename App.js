@@ -6,6 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useFonts } from 'expo-font';
 import {useEffect, useState} from "react";
 
+// todo: make the glowImage its own component
 export default function App() {
     const [loaded] = useFonts({
         Roman: require('./assets/fonts/Romana-Regular.otf'),
