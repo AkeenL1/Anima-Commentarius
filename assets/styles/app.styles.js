@@ -1,6 +1,7 @@
-import {StyleSheet} from "react-native";
+import {Dimensions, StyleSheet} from "react-native";
 import {useFonts} from "expo-font";
 
+const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
       height: "100%"
@@ -11,25 +12,51 @@ const styles = StyleSheet.create({
         height: "100%"
     },
     loginView: {
-        bottom: 225,
+        bottom: 200,
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
+        flexDirection: "row",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        alignContent: "center",
+        width: "100%"
     },
-    loginButton: {
+    signInButton: {
         borderWidth: 2,
-        borderColor: "#a07b89be344",
+        borderColor:"rgb(37,36,36)",
         borderRadius: 20,
-        width: "75%",
-        backgroundColor: 'rgba(159,158,158,0.5)'
-    },
-    text: {
         padding: 5,
-        fontSize: 33,
+        width: "40%",
+        backgroundColor: 'rgb(37,36,36)',
+    },
+    registerText: {
+        padding: 20,
+        fontSize: 25,
+        color: "black",
+        textAlign: "center",
+        fontFamily: "Roman"
+    },
+    signInText: {
+        padding: 20,
+        fontSize: 25,
         color: "white",
         textAlign: "center",
         fontFamily: "Roman"
+    },
+    registerButton: {
+        borderWidth: 2,
+        borderRadius: 20,
+        padding: 5,
+        width: "40%",
+        backgroundColor: 'white',
+        borderColor: 'white'
+    },
+    logo: {
+        width: width,
+        height: height * 0.4,
+        top: 100,
+
     }
+
 });
 
 export default styles
